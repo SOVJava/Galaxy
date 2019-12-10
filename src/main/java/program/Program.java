@@ -53,8 +53,8 @@ public class Program {
         Universe u1 = new Universe();
         u1.behavior();
 
-        /*System.out.println(u1.getGalaxies().get(0).getPlanets());
-        System.out.println(u1.getGalaxies());*/
+        System.out.println(u1.getGalaxies().get(0).getPlanets());
+        System.out.println(u1.getGalaxies());
 
     }
 }
