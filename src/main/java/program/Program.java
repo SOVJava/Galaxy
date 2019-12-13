@@ -1,5 +1,6 @@
 package program;
 
+import model.Galaxy;
 import model.Planet;
 import model.Universe;
 import util.Generator;
@@ -8,62 +9,167 @@ import java.util.Scanner;
 
 public class Program {
     public static void main(String[] args) {
+        Galaxy galaxy2 = null;
         while (true) {
-
             Scanner sc = new Scanner(System.in);
             System.out.println("Вас приветствует Виртуальный помошник.\n" +
                     "Нажмите 1 чтоб войти в панель планет,\n" + "нажмите 2 чтоб войти в панель галактик,\n" +
                     "нажмите 3 для входа в панель вселенной.\nВаш выбор: ");
-
             if (sc.hasNextInt()) {
                 int number = sc.nextInt();
-
                 switch (number) {
                     case 1:
-                        number = 1;
-                        System.out.println("1 - создать планету (по умолчанию),\n2 - создать планету через " +
-                                "конструктор,\n3 - создать планету со случайными параметрами,\n" +
-                                "4 - действия над планетой");
-                        while (true) {
-                            int pl = sc.nextInt();
-                            if (pl > 0 && pl <= 3) {
-                                switch (pl) {
-                                    case 1:
-                                        pl = 1;
-                                        System.out.println("Планета без параметров: ");
-                                        Planet planet = new Planet();
-                                        System.out.println(planet);
-                                        break;
-                                    case 2:
-                                        pl = 2;
-                                        System.out.println("Имя планеты: ");
-                                        String plTitle = sc.next();
-                                        System.out.println("Вес планеты: ");
-                                        int plWeight = sc.nextInt();
-                                        System.out.println("Координата Х: ");
-                                        int plX = sc.nextInt();
-                                        System.out.println("Координата Y: ");
-                                        int plY = sc.nextInt();
-                                        System.out.println("Координата Z: ");
-                                        int plZ = sc.nextInt();
-                                        Planet planet1 = new Planet(plTitle, plWeight, plX, plY, plZ);
-                                        System.out.println(planet1);
-                                        break;
-                                    case 3:
-                                        pl = 3;
-                                        Planet planet2 = Generator.generatePlanet();
-                                        System.out.println(planet2);
-                                        break;
+                        label:
+                        {
+                            while (true) {
+                                System.out.println("1 - создать планету (по умолчанию),\n" +
+                                        "2 - создать планету со случайными параметрами,\n" +
+                                        "3 - создать планету через конструктор,\n" +
+                                        "4 - выход из меню планеты");
+                                int pl = sc.nextInt();
+                                if (pl > 0 && pl <= 4) {
+                                    switch (pl) {
+                                        case 1:
+                                            System.out.println("Планета без параметров: ");
+                                            Planet planet = new Planet();
+                                            System.out.println(planet);
+                                            break;
+                                        case 2:
+                                            Planet planet2 = Generator.generatePlanet();
+                                            System.out.println(planet2);
+                                            break;
+                                        case 3:
+                                            System.out.println("Имя планеты: ");
+                                            String plTitle = sc.next();
+                                            System.out.println("Вес планеты: ");
+                                            int plWeight = sc.nextInt();
+                                            System.out.println("Координата Х: ");
+                                            int plX = sc.nextInt();
+                                            System.out.println("Координата Y: ");
+                                            int plY = sc.nextInt();
+                                            System.out.println("Координата Z: ");
+                                            int plZ = sc.nextInt();
+                                            Planet planet1 = new Planet(plTitle, plWeight, plX, plY, plZ);
+                                            System.out.println(planet1);
+                                            break;
+                                        case 4:
+                                            break label;
+                                    }
+
                                 }
                             }
                         }
+                        break;
                     case 2:
-                        number = 2;
-                        System.out.println("1 - создать галактику (по умолчанию),\n2 - создать галактику" +
-                                " чекез конструктор\n");
+                        label1:
+                        {
+                            while (true) {
+                                System.out.println("1 - Создать галактику\n" +
+                                        "2 - Добавить планету в галактику\n" +
+                                        "3 - Найти планету\n" +
+                                        "4 - Удалить планету\n" +
+                                        "5 - Список планет в галактике\n" +
+                                        "6 - Выход из меню галактики\n");
+                                int ga = sc.nextInt();
+                                if (ga > 0 && ga <= 6) {
+                                    switch (ga) {
+                                        case 1:
+                                            Galaxy galaxy1 = new Galaxy();
+                                            System.out.println("Галактика создана!");
+                                            galaxy2 = galaxy1;
+                                            break;
+                                        case 2:
+                                            if (galaxy2 == null) {
+                                                System.out.println("Галактики нет. Создайте галактику!");
+                                                break;
+                                            } else {
 
+                                                System.out.println("1 - Добавить планету (по умолчанию)\n" +
+                                                        "2 - Добавить случайную планету\n" +
+                                                        "3 - Добавить планету через конструктор\n");
+                                                int add = sc.nextInt();
+                                                switch (add) {
+                                                    case 1:
+                                                        Planet planet = new Planet();
+                                                        galaxy2.addPlanet(planet);
+                                                        System.out.println("Планета по умолчанию создана");
+                                                        break;
+                                                    case 2:
+                                                        galaxy2.addPlanet(Generator.generatePlanet());
+                                                        System.out.println("Случайная планета добавлена");
+                                                        break;
+                                                    case 3:
+                                                        System.out.println("Имя планеты");
+                                                        String ti = sc.next();
+                                                        System.out.println("Масса планеты");
+                                                        int we = sc.nextInt();
+                                                        System.out.println("Х координата");
+                                                        int xx = sc.nextInt();
+                                                        System.out.println("У координата");
+                                                        int yy = sc.nextInt();
+                                                        System.out.println("Z координата");
+                                                        int zz = sc.nextInt();
+                                                        galaxy2.addPlanet(new Planet(ti,we,xx,yy,zz));
+                                                        break;
+                                                }
+                                            }
+                                            break;
+                                        case 3:
+                                            if (galaxy2 == null) {
+                                                System.out.println("Галактики нет. Создайте галактику!");
+                                                break;
+                                            } else {
+                                                System.out.println("Введите имя искомой планеты");
+                                                String ser = sc.next();
+                                                int res = galaxy2.searchPlanet(ser);
+                                                if (res == -1) {
+                                                    System.out.println("Планета не найдена");
+                                                    break;
+                                                }
+                                                System.out.println("Индекс исомой планеты: " + res);
+                                                break;
+                                            }
+                                        case 4:
+                                            if (galaxy2 == null) {
+                                                System.out.println("Галактики нет. Создайте галактику!");
+                                                break;
+                                            } else {
+                                                System.out.println("Введите имя удаляемой планеты");
+                                                String del = sc.next();
+                                                boolean de = galaxy2.removePlanet(del);
+                                                if (!de) {
+                                                    System.out.println("Ошибка, такой планеты нет");
+                                                    break;
+                                                }
+                                                System.out.println("Планета удалена");
+                                                break;
+                                            }
+                                        case 5:
+                                            if (galaxy2 == null) {
+                                                System.out.println("Галактики нет. Создайте галактику!");
+                                                break;
+                                            } else {
+                                                System.out.println("Список планет галактики:");
+                                                System.out.println(galaxy2.getPlanets());
+                                                break;
+                                            }
+                                        case 6:
+                                            break label1;
+                                    }
+                                }
+                            }
+                        }
+                        break;
                     case 3:
-                        number = 3;
+                        label2:
+                        {
+                            while (true){
+
+
+
+
+                            }
+                        }
                 }
             } else {
                 System.out.println("Неверный ввод. Перезапустите программу и попробуйте снова!");

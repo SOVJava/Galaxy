@@ -14,6 +14,10 @@ public class Planet{
         this.coordinates = new Coordinates();
     }
 
+    public Planet(String title) {
+        this.title = title;
+    }
+
     public Planet(String title, int weight) {
         this.title = title;
         this.weight = weight;
