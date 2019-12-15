@@ -5,6 +5,7 @@ import model.Planet;
 import model.Universe;
 import util.Generator;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Program {
@@ -13,9 +14,10 @@ public class Program {
         Universe universe = null;
         while (true) {
             Scanner sc = new Scanner(System.in);
+            System.out.println(" ");
             System.out.println("Вас приветствует Виртуальный помошник.\n" +
                     "Нажмите 1 чтоб войти в панель планет,\n" + "нажмите 2 чтоб войти в панель галактик,\n" +
-                    "нажмите 3 для входа в панель вселенной.\nВаш выбор: ");
+                    "нажмите 3 для входа в панель вселенной.\nнажмите 4 для выхода из программы.\nВаш выбор: ");
             if (sc.hasNextInt()) {
                 int number = sc.nextInt();
                 switch (number) {
@@ -23,6 +25,7 @@ public class Program {
                         label:
                         {
                             while (true) {
+                                System.out.println(" ");
                                 System.out.println("1 - создать планету (по умолчанию),\n" +
                                         "2 - создать планету со случайными параметрами,\n" +
                                         "3 - создать планету через конструктор,\n" +
@@ -65,6 +68,7 @@ public class Program {
                         label1:
                         {
                             while (true) {
+                                System.out.println(" ");
                                 System.out.println("1 - Создать галактику\n" +
                                         "2 - Добавить планету в галактику\n" +
                                         "3 - Найти планету\n" +
@@ -84,6 +88,7 @@ public class Program {
                                                 System.out.println("Галактики нет. Создайте галактику!");
                                                 break;
                                             } else {
+                                                System.out.println(" ");
                                                 System.out.println("1 - Добавить планету (по умолчанию)\n" +
                                                         "2 - Добавить случайную планету\n" +
                                                         "3 - Добавить планету через конструктор\n");
@@ -127,9 +132,10 @@ public class Program {
                                                 if (res == -1) {
                                                     System.out.println("Планета не найдена");
                                                     break;
+                                                } else {
+                                                    System.out.println("Индекс исомой планеты: " + res);
+                                                    break;
                                                 }
-                                                System.out.println("Индекс исомой планеты: " + res);
-                                                break;
                                             }
                                         case 4:
                                             if (galaxy2 == null) {
@@ -142,9 +148,10 @@ public class Program {
                                                 if (!de) {
                                                     System.out.println("Ошибка, такой планеты нет");
                                                     break;
+                                                } else {
+                                                    System.out.println("Планета удалена");
+                                                    break;
                                                 }
-                                                System.out.println("Планета удалена");
-                                                break;
                                             }
                                         case 5:
                                             if (galaxy2 == null) {
@@ -165,17 +172,17 @@ public class Program {
                     case 3:
                         label2:
                         {
-                            while (true){
+                            while (true) {
+                                System.out.println(" ");
                                 System.out.println("Панель управления вселенной:\n" +
                                         "1 - создать вселенную\n" +
                                         "2 - запуск генерации вселенной\n" +
                                         "3 - добавить галактику\n" +
-                                        "4 - найти галактику\n" +
-                                        "5 - удалить галактике\n" +
-                                        "6 - список галактик во вселенной\n" +
-                                        "7 - выход из меню вселенной");
+                                        "4 - найти: \n" +
+                                        "5 - список галактик во вселенной\n" +
+                                        "6 - выход из меню вселенной");
                                 int univ = sc.nextInt();
-                                if (univ>0&&univ<=6) {
+                                if (univ > 0 && univ <= 6) {
                                     switch (univ) {
                                         case 1:
                                             Universe universe2 = new Universe();
@@ -183,117 +190,109 @@ public class Program {
                                             universe = universe2;
                                             break;
                                         case 2:
-                                            System.out.println("Генерация запущена");
-                                            universe.behavior();
-                                            break;
+                                            if (universe == null) {
+                                                System.out.println("Вселенной нет. Создайте вселеннуюю");
+                                                break;
+                                            } else {
+                                                System.out.println("Генерация запущена");
+                                                universe.behavior();
+                                                break;
+                                            }
                                         case 3:
-                                            System.out.println("1 - добавить галактику(по умолчанию)\n" +
-                                                    "2 - добавить сгенерированую галактику\n" +
-                                                    "3 - добавить галактику через конструктор");
-                                            int addG = sc.nextInt();
-                                            if (addG > 0 && addG <= 3) {
-                                                switch (addG) {
-                                                    case 1:
-                                                        Galaxy galaxy3 = new Galaxy();
-                                                        universe.addGalaxy(galaxy3);
-                                                        System.out.println("Галактика по умолчанию добавлена");
-                                                        break;
-                                                    case 2:
-                                                        universe.addGalaxy(Generator.generateGalaxy());
-                                                        System.out.println("Сгенерированая галактика добавлена");
-                                                        break;
-                                                    case 3:
-                                                        System.out.println("Введите имя создаваемой галактики: ");
-                                                        String titleG = sc.next();
-                                                        Galaxy galaxy4 = new Galaxy(titleG);
-                                                        System.out.println("Галактика создана");
-                                                        break;
+                                            if (universe == null) {
+                                            System.out.println("Вселенной нет. Создайте вселеннуюю");
+                                            break;
+                                        } else {
+                                                System.out.println(" ");
+                                                System.out.println("1 - добавить галактику(по умолчанию)\n" +
+                                                        "2 - добавить сгенерированую галактику\n" +
+                                                        "3 - добавить галактику через конструктор");
+                                                int addG = sc.nextInt();
+                                                if (addG > 0 && addG <= 3) {
+                                                    switch (addG) {
+                                                        case 1:
+                                                            Galaxy galaxy3 = new Galaxy();
+                                                            universe.addGalaxy(galaxy3);
+                                                            System.out.println("Галактика по умолчанию добавлена");
+                                                            break;
+                                                        case 2:
+                                                            universe.addGalaxy(Generator.generateGalaxy());
+                                                            System.out.println("Сгенерированая галактика добавлена");
+                                                            break;
+                                                        case 3:
+                                                            System.out.println("Введите имя создаваемой галактики: ");
+                                                            String titleG = sc.next();
+                                                            Galaxy galaxy4 = new Galaxy(titleG);
+                                                            System.out.println("Галактика создана");
+                                                            break;
+                                                    }
                                                 }
                                             }
                                             break;
                                         case 4:
-                                        case 5:
-                                        case 6:
-                                            for (int i = 0; i < universe.getGalaxies().size(); i++) {
-                                                System.out.println(universe.getGalaxies().get(i).getTitle());
-                                                for (int j = 0; j < universe.getGalaxies().get(i).getPlanets().
-                                                        size(); j++) {
-                                                    System.out.println(universe.getGalaxies().get(i).getPlanets().
-                                                            get(j));
+                                            if (universe == null) {
+                                                System.out.println("Вселенной нет. Создайте вселеннуюю");
+                                                break;
+                                            } else {
+                                                System.out.println("1 - Поиск галактики\n" +
+                                                        "2 - поиск планеты");
+                                                int search = sc.nextInt();
+                                                switch (search) {
+                                                    case 1:
+                                                        System.out.println("Введите имя галактики");
+                                                        String titleGalaxy = sc.next();
+                                                        int indGal = universe.searchGalaxy(titleGalaxy);
+                                                        if (indGal == -1) {
+                                                            System.out.println("Галактика не найдена");
+                                                            break;
+                                                        } else {
+                                                            System.out.println("Найденная галактика имеет индекс: "
+                                                                    + indGal);
+                                                            break;
+                                                        }
+                                                    case 2:
+                                                        System.out.println("Введите имя планеты");
+                                                        String titlePlanet = sc.next();
+                                                        int[] indPla = universe.searchPlanet(titlePlanet);
+                                                        if (indPla == null) {
+                                                            System.out.println("Планета не найдена");
+                                                            break;
+                                                        } else {
+                                                            System.out.println("Найденная планета находится: " +
+                                                                    Arrays.toString(indPla));
+                                                            break;
+                                                        }
                                                 }
                                             }
                                             break;
-                                        case 7:
+                                        case 5:
+                                            if (universe == null) {
+                                                System.out.println("Вселенной нет. Создайте вселеннуюю");
+                                                break;
+                                            } else {
+                                                for (int i = 0; i < universe.getGalaxies().size(); i++) {
+                                                    System.out.println(universe.getGalaxies().get(i).getTitle());
+                                                    for (int j = 0; j < universe.getGalaxies().get(i).getPlanets().
+                                                            size(); j++) {
+                                                        System.out.println(universe.getGalaxies().get(i).getPlanets().
+                                                                get(j));
+                                                    }
+                                                }
+                                            }
+                                            break;
+                                        case 6:
                                             break label2;
                                     }
                                 }
                             }
                         }
+                        break;
+                    case 4:
+                        return;
                 }
             } else {
                 System.out.println("Неверный ввод. Перезапустите программу и попробуйте снова!");
             }
         }
-
-
-
-        /*Planet pl1 = new Planet("qwen", 123, 10,20,30);
-        System.out.println(pl1.getTitle());
-        pl1.setTitle("P122");
-        System.out.println(pl1.getTitle());*/
-
-
-        /*Galaxy g1 = new Galaxy("G1");
-        g1.addPlanet(new Planet("P333", 515,100,150,130));
-        g1.addPlanet(new Planet("P334", 510,2,3,90));
-        g1.addPlanet(new Planet("P754",435,50,10,300));
-        g1.addPlanet(new Planet("P112",600,80,99,314));
-        g1.addPlanet(new Planet("P115",601,89,999,514));
-        g1.addPlanet(Generator.generatePlanet());
-
-        Galaxy g2 = new Galaxy("G2");
-        g2.addPlanet(Generator.generatePlanet());
-        g2.addPlanet(Generator.generatePlanet());
-        g2.addPlanet(new Planet("P555",600,89,599,300));
-
-        System.out.println(g1.getPlanets());
-        System.out.println(g2.getPlanets());
-
-        int x1 = g1.searchPlanet("P334");
-        System.out.println(x1);
-        int x2 = g1.searchPlanet("P335");
-        System.out.println(x2);
-
-        if (!g1.removePlanet("P334"))
-            System.out.println("Планеты нет");
-        else System.out.println("Планета удалена");
-
-        if (!g1.removePlanet(new Planet("P111",600,80,99,314)))
-            System.out.println("Планеты нет");
-        else System.out.println("Планета удалена");
-
-        //String y = galaxy1.behavior();
-        //System.out.println(y);
-
-        Universe u1 = new Universe();
-        u1.addGalaxy(g1);
-        u1.addGalaxy(g2);
-
-        int gal1 = u1.searchGalaxy(g1);
-        System.out.println(gal1);
-        int gal2 = u1.searchGalaxy("G2");
-        System.out.println(gal2);
-
-        int[] pl1 = u1.searchPlanet(new Planet("P754",435,50,10,300));
-        System.out.println(Arrays.toString(pl1));
-        int[] pl2 = u1.searchPlanet("P115");
-        System.out.println(Arrays.toString(pl2));*/
-
-        /*Universe u1 = new Universe();
-        u1.behavior();*/
-
-        /*System.out.println(u1.getGalaxies().get(0).getPlanets());
-        System.out.println(u1.getGalaxies());*/
-
     }
 }
