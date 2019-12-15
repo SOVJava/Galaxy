@@ -75,16 +75,12 @@ public class Universe{
         timer.scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run() {
-                for (int i = 0; i < (5 + Math.random()*(6)); i++) {
+                for (int i = 0; i < ((int)(5 + Math.random()*(6))); i++) {
                     addGalaxy(Generator.generateGalaxy());
-
-                    System.out.println(galaxies.get(i).getTitle());              //удалить
-
-                    for (int j = 0; j < (5 + Math.random()*(6)); j++) {
+                    //System.out.println(galaxies.get(i).getTitle());              //удалить
+                    for (int j = 0; j < ((int)(5 + Math.random()*(6))); j++) {
                         galaxies.get(i).addPlanet(Generator.generatePlanet());
-
-                        System.out.println(galaxies.get(i).getPlanets().get(j));       //удалить
-
+                        //System.out.println(galaxies.get(i).getPlanets().get(j));       //удалить
                     }
                 }
             }
@@ -92,14 +88,10 @@ public class Universe{
         /*while (true){
             for (int i = 0; i < (5 + Math.random()*(6)); i++) {
                 addGalaxy(Generator.generateGalaxy());
-
-                System.out.println(galaxies.get(i).getTitle());              //удалить
-
+                //System.out.println(galaxies.get(i).getTitle());              //удалить
                 for (int j = 0; j < (5 + Math.random()*(6)); j++) {
                     galaxies.get(i).addPlanet(Generator.generatePlanet());
-
-                    System.out.println(galaxies.get(i).getPlanets().get(j));       //удалить
-
+                    //System.out.println(galaxies.get(i).getPlanets().get(j));       //удалить
                 }
             }
             try {
