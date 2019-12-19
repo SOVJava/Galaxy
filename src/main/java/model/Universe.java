@@ -70,6 +70,13 @@ public class Universe{
         return null;
     }
 
+    public boolean removeGalaxy (String title){
+        int x = searchGalaxy(title);
+        if (x==-1)
+            return false;
+        return galaxies.remove(x) != null;
+    }
+
     public void behavior(){
         Timer timer = new Timer();
         timer.scheduleAtFixedRate(new TimerTask() {
@@ -77,29 +84,9 @@ public class Universe{
             public void run() {
                 for (int i = 0; i < ((int)(5 + Math.random()*(6))); i++) {
                     addGalaxy(Generator.generateGalaxy());
-                    //System.out.println(galaxies.get(i).getTitle());              //удалить
-                    for (int j = 0; j < ((int)(5 + Math.random()*(6))); j++) {
-                        galaxies.get(i).addPlanet(Generator.generatePlanet());
-                        //System.out.println(galaxies.get(i).getPlanets().get(j));       //удалить
-                    }
                 }
             }
         }, 0, 30 * 1000);
-        /*while (true){
-            for (int i = 0; i < (5 + Math.random()*(6)); i++) {
-                addGalaxy(Generator.generateGalaxy());
-                //System.out.println(galaxies.get(i).getTitle());              //удалить
-                for (int j = 0; j < (5 + Math.random()*(6)); j++) {
-                    galaxies.get(i).addPlanet(Generator.generatePlanet());
-                    //System.out.println(galaxies.get(i).getPlanets().get(j));       //удалить
-                }
-            }
-            try {
-                Thread.sleep(30 * 1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }*/
     }
 
     @Override

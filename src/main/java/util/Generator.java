@@ -18,6 +18,9 @@ public class Generator {
     public static Galaxy generateGalaxy() {
         Galaxy galaxy = new Galaxy();
         galaxy.setTitle("G" + generateNumber(100, 999));
+        for (int j = 0; j < ((int)(5 + Math.random()*(6))); j++) {
+            galaxy.addPlanet(Generator.generatePlanet());
+        }
         return galaxy;
     }
 
