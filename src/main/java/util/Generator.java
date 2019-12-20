@@ -20,6 +20,7 @@ public class Generator {
         galaxy.setTitle("G" + generateNumber(100, 999));
         for (int j = 0; j < ((int)(5 + Math.random()*(6))); j++) {
             galaxy.addPlanet(Generator.generatePlanet());
+            System.out.println(galaxy.getTitle());
         }
         return galaxy;
     }
@@ -27,6 +28,4 @@ public class Generator {
     private static int generateNumber(int a, int b) {
         return (int) (a + Math.random() * (b - a + 1));
     }
-
-
 }

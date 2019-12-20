@@ -13,6 +13,8 @@ public class Universe{
     private String title;
     private ArrayList<Galaxy> galaxies = new ArrayList<>();
 
+    private Timer timer = new Timer();
+
     public Universe() {
         this.title = "";
     }
@@ -77,16 +79,31 @@ public class Universe{
         return galaxies.remove(x) != null;
     }
 
-    public void behavior(){
-        Timer timer = new Timer();
-        timer.scheduleAtFixedRate(new TimerTask() {
-            @Override
-            public void run() {
-                for (int i = 0; i < ((int)(5 + Math.random()*(6))); i++) {
-                    addGalaxy(Generator.generateGalaxy());
+    public boolean removePlanet (String gTitle, String pTitle){
+        int x = searchGalaxy(gTitle);
+        if (x==-1)
+            return false;
+        int y = galaxies.get(x).searchPlanet(pTitle);
+        if (y==-1)
+            return false;
+        return galaxies.get(x).removePlanet(pTitle);
+    }
+
+    public void behavior(boolean has){
+        if (has) {
+            timer = new Timer();
+            timer.scheduleAtFixedRate(new TimerTask() {
+                @Override
+                public void run() {
+                    for (int i = 0; i < ((int) (5 + Math.random() * (6))); i++) {
+                        addGalaxy(Generator.generateGalaxy());
+                    }
                 }
-            }
-        }, 0, 30 * 1000);
+            }, 0, 30 * 1000);
+        }
+        else
+            timer.cancel();
+
     }
 
     @Override
