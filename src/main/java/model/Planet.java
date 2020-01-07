@@ -4,7 +4,7 @@ import com.google.gson.Gson;
 
 import java.util.Objects;
 
-public class Planet{
+public class Planet {
     private String title;
     private int weight;
     private Coordinates coordinates;

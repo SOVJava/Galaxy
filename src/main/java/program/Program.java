@@ -52,6 +52,7 @@ public class Program {
                                             case 2:
                                                 Planet planet2 = Generator.generatePlanet();
                                                 System.out.println(planet2);
+                                                planet = planet2;
                                                 break;
                                             case 3:
                                                 System.out.println("Имя планеты: ");
@@ -66,17 +67,20 @@ public class Program {
                                                 int plZ = sc.nextInt();
                                                 Planet planet3 = new Planet(plTitle, plWeight, plX, plY, plZ);
                                                 System.out.println(planet3);
+                                                planet = planet3;
                                                 break;
                                             case 4:
                                                 System.out.println("1 - behavior\n" +
-                                                        "2 - назад");
+                                                        "2 - equals\n" +
+                                                        "3 - compare\n" +
+                                                        "4 - назад");
                                                 if (!sc.hasNextInt()) {
                                                     System.out.println("Неверный ввод. Перезапустите программу и" +
                                                             " попробуйте снова!");
                                                     break;
                                                 } else {
                                                     int operPl = sc.nextInt();
-                                                    if (operPl > 0 && operPl <= 2) {
+                                                    if (operPl > 0 && operPl <= 4) {
                                                         switch (operPl) {
                                                             case 1:
                                                                 if (planet == null) {
@@ -89,6 +93,71 @@ public class Program {
                                                                     break;
                                                                 }
                                                             case 2:
+                                                                if (planet == null) {
+                                                                    System.out.println("Галактики нет. Создайте " +
+                                                                            "планету!");
+                                                                    break;
+                                                                } else {
+                                                                    System.out.println("Введите планету для сравнения" +
+                                                                            " (equals)\n" +
+                                                                            "Ввседите имя планеты: ");
+                                                                    String plT = sc.next();
+                                                                    System.out.println("ведите вес: ");
+                                                                    int plW = sc.nextInt();
+                                                                    System.out.println("координата Х: ");
+                                                                    int plaX = sc.nextInt();
+                                                                    System.out.println("координата У: ");
+                                                                    int plaY = sc.nextInt();
+                                                                    System.out.println("координата Z: ");
+                                                                    int plaZ = sc.nextInt();
+                                                                    Planet planet4 = new Planet(plT, plW,plaX,
+                                                                            plaY, plaZ);
+                                                                    boolean eq1 = planet.equals(planet4);
+                                                                    if (eq1) {
+                                                                        System.out.println("Планеты равны!");
+                                                                        break;
+                                                                    }
+                                                                    else {
+                                                                        System.out.println("Планеты не равны");
+                                                                        break;
+                                                                    }
+                                                                }
+                                                            case 3:
+                                                                if (planet == null) {
+                                                                    System.out.println("Галактики нет. Создайте " +
+                                                                            "планету!");
+                                                                    break;
+                                                                } else {
+                                                                    System.out.println("Введите планету для сравнения" +
+                                                                            " (compare)\n" +
+                                                                            "Ввседите имя планеты: ");
+                                                                    String plTi = sc.next();
+                                                                    System.out.println("ведите вес: ");
+                                                                    int plWe = sc.nextInt();
+                                                                    System.out.println("координата Х: ");
+                                                                    int plaXX = sc.nextInt();
+                                                                    System.out.println("координата У: ");
+                                                                    int plaYY = sc.nextInt();
+                                                                    System.out.println("координата Z: ");
+                                                                    int plaZZ = sc.nextInt();
+                                                                    Planet planet5 = new Planet(plTi, plWe,
+                                                                            plaXX, plaYY, plaZZ);
+                                                                    int cpm = Integer.compare(planet.getWeight(),
+                                                                            planet5.getWeight());
+                                                                    if (cpm<0) {
+                                                                        System.out.println("Введённая планета больше");
+                                                                        break;
+                                                                    }
+                                                                    else if (cpm == 0) {
+                                                                        System.out.println("Планеты равны");
+                                                                        break;
+                                                                    }
+                                                                    else {
+                                                                        System.out.println("Введённая планета меньше");
+                                                                        break;
+                                                                    }
+                                                                }
+                                                            case 4:
                                                                 break;
 
                                                         }
@@ -112,7 +181,7 @@ public class Program {
                                         "2 - Добавить планету в галактику\n" +
                                         "3 - Найти планету\n" +
                                         "4 - Удалить планету\n" +
-                                        "5 - behavior" +
+                                        "5 - действия\n" +
                                         "6 - Список планет в галактике\n" +
                                         "7 - Выход из меню галактики\n");
                                 if (!sc.hasNextInt()) {
@@ -213,9 +282,72 @@ public class Program {
                                                     System.out.println("Галактики нет. Создайте галактику!");
                                                     break;
                                                 } else {
-                                                    galaxy.behavior();
-                                                    System.out.println("Behavior выполнен");
+                                                    System.out.println(" ");
+                                                    System.out.println("1 - Behavior\n" +
+                                                            "2 - equals\n" +
+                                                            "3 - compare\n" +
+                                                            "4 - назад");
+                                                    if (!sc.hasNextInt()) {
+                                                        System.out.println("Неверный ввод. Перезапустите программу" +
+                                                                " и попробуйте снова!");
+                                                        break;
+                                                    } else {
+                                                        int add = sc.nextInt();
+                                                        if (add > 0 && add <= 3) {
+                                                            switch (add) {
+                                                                case 1:
+                                                                    galaxy.behavior();
+                                                                    System.out.println("Behavior выполнен");
+                                                                    break;
+                                                                case 2:
+                                                                    System.out.println("Введите индекс планеты" +
+                                                                            " сравненеия");
+                                                                    int equals1 = sc.nextInt();
+                                                                    System.out.println("введите индекс планеты для" +
+                                                                            " сравнения");
+                                                                    int equals2 = sc.nextInt();
+
+                                                                    Planet pl1 = galaxy.getPlanets().get(equals1);
+                                                                    Planet pl2 = galaxy.getPlanets().get(equals2);
+                                                                    boolean res = pl1.equals(pl2);
+                                                                    if (res) {
+                                                                        System.out.println("Планеты равны!");
+                                                                        break;
+                                                                    }
+                                                                    else {
+                                                                        System.out.println("Планеты не равны");
+                                                                        break;
+                                                                    }
+                                                                case 3:
+                                                                    System.out.println("Введите индекс планеты" +
+                                                                            " сравнения");
+                                                                    int ind1 = sc.nextInt();
+                                                                    System.out.println("Введите индекс планеты для" +
+                                                                            " сравнения");
+                                                                    int ind2 = sc.nextInt();
+                                                                    Planet plan1 = galaxy.getPlanets().get(ind1);
+                                                                    Planet plan2 = galaxy.getPlanets().get(ind2);
+                                                                    int resComp = Integer.compare(plan1.getWeight(),
+                                                                            plan2.getWeight());
+                                                                    if (resComp>0) {
+                                                                        System.out.println("Первая планета больше");
+                                                                        break;
+                                                                    }
+                                                                    else if (resComp == 0) {
+                                                                        System.out.println("Планеты равны");
+                                                                        break;
+                                                                    }
+                                                                    else {
+                                                                        System.out.println("Вторая планета больше");
+                                                                        break;
+                                                                    }
+                                                                case 4:
+                                                                    break;
+                                                            }
+                                                        }
+                                                    }
                                                 }
+                                                break;
                                             case 6:
                                                 if (galaxy == null) {
                                                     System.out.println("Галактики нет. Создайте галактику!");
@@ -255,7 +387,7 @@ public class Program {
                                         switch (univ) {
                                             case 1:
                                                 Universe universe2 = new Universe();
-                                                System.out.println("Галактика создана");
+                                                System.out.println("Вселленная создана");
                                                 universe = universe2;
                                                 break;
                                             case 2:

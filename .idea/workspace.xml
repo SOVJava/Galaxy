@@ -7,9 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c643bc43-72b5-4aec-8d84-e3e9b0367d30" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Galaxy_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Galaxy_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Galaxy_jar.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Universe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Universe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Planet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Planet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/program/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/program/Program.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/util/Generator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/Generator.java" afterDir="false" />
     </list>
@@ -29,8 +30,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/program/Program.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="930">
-              <caret line="324" column="77" selection-start-line="324" selection-start-column="77" selection-end-line="324" selection-end-column="77" />
+            <state relative-caret-position="91">
+              <caret line="320" column="71" selection-start-line="320" selection-start-column="71" selection-end-line="320" selection-end-column="71" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -41,12 +42,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/model/Planet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="54" column="26" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="26" />
+            <state relative-caret-position="754">
+              <caret line="88" column="28" selection-start-line="88" selection-start-column="28" selection-end-line="88" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#314#315#0" expanded="true" />
-                <element signature="e#348#349#0" expanded="true" />
+                <element signature="e#1926#1927#0" expanded="true" />
+                <element signature="e#1989#1990#0" expanded="true" />
+                <element signature="e#2035#2036#0" expanded="true" />
+                <element signature="e#2081#2082#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -55,7 +58,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/model/Galaxy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-284">
+            <state relative-caret-position="567">
               <caret line="57" column="27" selection-start-line="57" selection-start-column="27" selection-end-line="57" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -79,17 +82,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/model/Universe.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="101" column="20" selection-start-line="101" selection-start-column="20" selection-end-line="101" selection-end-column="20" />
+            <state relative-caret-position="1445">
+              <caret line="106" column="5" selection-start-line="106" selection-start-column="5" selection-end-line="106" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#377#378#0" expanded="true" />
-                <element signature="e#411#412#0" expanded="true" />
-                <element signature="e#465#466#0" expanded="true" />
-                <element signature="e#499#500#0" expanded="true" />
-                <element signature="e#1989#2354#0" expanded="true" />
-                <element signature="e#2353#2354#0" expanded="true" />
+                <element signature="e#2982#2983#0" expanded="true" />
                 <element signature="e#3024#3025#0" expanded="true" />
+                <element signature="e#3070#3071#0" expanded="true" />
                 <element signature="e#3116#3117#0" expanded="true" />
               </folding>
             </state>
@@ -99,12 +98,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/util/Generator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+            <state relative-caret-position="340">
+              <caret line="21" column="57" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#850#851#0" expanded="true" />
-                <element signature="e#912#913#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -143,10 +140,10 @@
         <option value="$PROJECT_DIR$/src/main/java/program/Generation.java" />
         <option value="$PROJECT_DIR$/src/main/java/program/Generator.java" />
         <option value="$PROJECT_DIR$/src/main/java/Util/Generator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/Planet.java" />
         <option value="$PROJECT_DIR$/src/test/java/model/UniverseTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/util/Generator.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/Universe.java" />
+        <option value="$PROJECT_DIR$/src/main/java/util/Generator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/Planet.java" />
         <option value="$PROJECT_DIR$/src/main/java/program/Program.java" />
       </list>
     </option>
@@ -171,6 +168,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -220,43 +218,10 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Galaxy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Galaxy" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Galaxy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Galaxy" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Galaxy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Galaxy" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Galaxy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Galaxy" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-              <item name="program" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Galaxy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Galaxy" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -265,7 +230,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Arquillian JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Arrays" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Artifacts" />
@@ -368,7 +333,16 @@
       <workItem from="1576519226794" duration="604000" />
       <workItem from="1576754606635" duration="2946000" />
       <workItem from="1576781987560" duration="14154000" />
-      <workItem from="1576822678789" duration="11792000" />
+      <workItem from="1576822678789" duration="12447000" />
+      <workItem from="1577035138375" duration="1641000" />
+      <workItem from="1577178121282" duration="1927000" />
+      <workItem from="1577184305009" duration="644000" />
+      <workItem from="1577200762086" duration="6953000" />
+      <workItem from="1577222086939" duration="593000" />
+      <workItem from="1577254160739" duration="1927000" />
+      <workItem from="1577342271451" duration="2055000" />
+      <workItem from="1577354196627" duration="3132000" />
+      <workItem from="1578417030107" duration="3843000" />
     </task>
     <task id="LOCAL-00001" summary="add console interface planet">
       <created>1576014726518</created>
@@ -426,11 +400,18 @@
       <option name="project" value="LOCAL" />
       <updated>1576791827136</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="end console menu">
+      <created>1576851811887</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1576851811888</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="220459000" />
+    <option name="totallyTimeSpent" value="243829000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -445,7 +426,7 @@
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49884528" visible="true" weight="0.18532526" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49884528" visible="true" weight="0.21331316" />
       <window_info id="Structure" order="1" sideWeight="0.5011547" side_tool="true" weight="0.23524962" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -454,13 +435,13 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32850242" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.36553946" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.36553946" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3993559" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32850242" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="8" visible="true" weight="0.32850242" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32850242" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32850242" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
@@ -530,7 +511,8 @@
     <MESSAGE value="add console interface little universe" />
     <MESSAGE value="add console interface universe" />
     <MESSAGE value="add little methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="add little methods" />
+    <MESSAGE value="end console menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="end console menu" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://C:/Program Files/Java/jdk-12.0.2/lib/src.zip!/java.base/jdk/internal/util/Preconditions.java">
@@ -603,40 +585,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/model/UniverseTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Planet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="54" column="26" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#314#315#0" expanded="true" />
-            <element signature="e#348#349#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Galaxy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-284">
-          <caret line="57" column="27" selection-start-line="57" selection-start-column="27" selection-end-line="57" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#229#230#0" expanded="true" />
-            <element signature="e#258#259#0" expanded="true" />
-            <element signature="e#293#294#0" expanded="true" />
-            <element signature="e#327#328#0" expanded="true" />
-            <element signature="e#377#378#0" expanded="true" />
-            <element signature="e#411#412#0" expanded="true" />
-            <element signature="e#590#591#0" expanded="true" />
-            <element signature="e#637#638#0" expanded="true" />
-            <element signature="e#1096#1097#0" expanded="true" />
-            <element signature="e#1141#1142#0" expanded="true" />
-            <element signature="e#1362#1363#0" expanded="true" />
-            <element signature="e#1402#1403#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-12.0.2/lib/src.zip!/java.base/java/util/Timer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="403">
@@ -646,18 +594,6 @@
             <element signature="e#5449#5450#0" expanded="true" />
             <element signature="e#7813#7814#0" expanded="true" />
             <element signature="e#7859#7860#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/util/Generator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#850#851#0" expanded="true" />
-            <element signature="e#912#913#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -680,28 +616,71 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/META-INF/MANIFEST.MF" />
     <entry file="file://$PROJECT_DIR$/src/main/java/model/Universe.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="101" column="20" selection-start-line="101" selection-start-column="20" selection-end-line="101" selection-end-column="20" />
+        <state relative-caret-position="1445">
+          <caret line="106" column="5" selection-start-line="106" selection-start-column="5" selection-end-line="106" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2982#2983#0" expanded="true" />
+            <element signature="e#3024#3025#0" expanded="true" />
+            <element signature="e#3070#3071#0" expanded="true" />
+            <element signature="e#3116#3117#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/util/Generator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="21" column="57" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/Planet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="754">
+          <caret line="88" column="28" selection-start-line="88" selection-start-column="28" selection-end-line="88" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1926#1927#0" expanded="true" />
+            <element signature="e#1989#1990#0" expanded="true" />
+            <element signature="e#2035#2036#0" expanded="true" />
+            <element signature="e#2081#2082#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/Galaxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="57" column="27" selection-start-line="57" selection-start-column="27" selection-end-line="57" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#229#230#0" expanded="true" />
+            <element signature="e#258#259#0" expanded="true" />
+            <element signature="e#293#294#0" expanded="true" />
+            <element signature="e#327#328#0" expanded="true" />
             <element signature="e#377#378#0" expanded="true" />
             <element signature="e#411#412#0" expanded="true" />
-            <element signature="e#465#466#0" expanded="true" />
-            <element signature="e#499#500#0" expanded="true" />
-            <element signature="e#1989#2354#0" expanded="true" />
-            <element signature="e#2353#2354#0" expanded="true" />
-            <element signature="e#3024#3025#0" expanded="true" />
-            <element signature="e#3116#3117#0" expanded="true" />
+            <element signature="e#590#591#0" expanded="true" />
+            <element signature="e#637#638#0" expanded="true" />
+            <element signature="e#1096#1097#0" expanded="true" />
+            <element signature="e#1141#1142#0" expanded="true" />
+            <element signature="e#1362#1363#0" expanded="true" />
+            <element signature="e#1402#1403#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/program/Program.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="930">
-          <caret line="324" column="77" selection-start-line="324" selection-start-column="77" selection-end-line="324" selection-end-column="77" />
+        <state relative-caret-position="91">
+          <caret line="320" column="71" selection-start-line="320" selection-start-column="71" selection-end-line="320" selection-end-column="71" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -719,7 +698,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -767,7 +745,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
