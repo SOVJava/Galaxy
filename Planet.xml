@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Planet>
+    <Title>Mars</Title>
+    <Weight>100</Weight>
+    <Coordinates>
+        <x>50</x>
+        <y>50</y>
+        <z>50</z>
+    </Coordinates>
+</Planet>

@@ -1,0 +1,2 @@
+cd C:\Users\olego\Desktop\Java\Projects\Galaxy\src\main\java
+javac -cp C:\Users\olego\.m2\repository\com\google\code\gson\gson\2.8.6\gson-2.8.6.jar -d C:\Users\olego\Desktop\Java\Projects\Galaxy\bin -encoding utf8 program\Program.java model\Coordinates.java model\Galaxy.java model\Planet.java model\Universe.java util\Generator.java

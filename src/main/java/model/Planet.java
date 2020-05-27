@@ -1,7 +1,15 @@
 package model;
 
 import com.google.gson.Gson;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.xml.sax.SAXException;
 
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import java.io.IOException;
 import java.util.Objects;
 
 public class Planet {
@@ -68,6 +76,22 @@ public class Planet {
     public Planet behavior(){
         coordinates.moveK();
         return this;
+    }
+
+    public static Planet parseXML(String fileName) throws ParserConfigurationException, IOException, SAXException {
+        DocumentBuilder bilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
+        Document document = bilder.parse(fileName);
+        Element elementPlanet = (Element) document.getElementsByTagName("Planet").item(0);
+        Planet planet = new Planet();
+        planet.setTitle(elementPlanet.getElementsByTagName("Title").item(0).getTextContent());
+        planet.setWeight(Integer.parseInt(elementPlanet.getElementsByTagName("Weight").item(0).getTextContent()));
+
+        Element coordinates = (Element) document.getElementsByTagName("Coordinates").item(0);
+
+        planet.setX(Integer.parseInt(coordinates.getElementsByTagName("x").item(0).getTextContent()));
+        planet.setY(Integer.parseInt(coordinates.getElementsByTagName("y").item(0).getTextContent()));
+        planet.setZ(Integer.parseInt(coordinates.getElementsByTagName("z").item(0).getTextContent()));
+        return planet;
     }
 
     @Override

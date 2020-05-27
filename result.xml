@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<UniverseGroup>
+    <Group name="Mars">
+        <Planet>
+            <Title>Mars</Title>
+            <Weight>100</Weight>
+            <Coordinates>
+                <x>50</x>
+                <y>50</y>
+                <z>50</z>
+            </Coordinates>
+        </Planet>
+    </Group>
+    <Group name="Neptune">
+        <Planet>
+            <Title>Neptune</Title>
+            <Weight>200</Weight>
+            <Coordinates>
+                <x>110</x>
+                <y>300</y>
+                <z>200</z>
+            </Coordinates>
+        </Planet>
+        <Planet>
+            <Title>Neptune</Title>
+            <Weight>8000</Weight>
+            <Coordinates>
+                <x>3510</x>
+                <y>4600</y>
+                <z>3300</z>
+            </Coordinates>
+        </Planet>
+    </Group>
+    <Group name="Tulus">
+        <Planet>
+            <Title>Tulus</Title>
+            <Weight>1240</Weight>
+            <Coordinates>
+                <x>500</x>
+                <y>505</y>
+                <z>590</z>
+            </Coordinates>
+        </Planet>
+        <Planet>
+            <Title>Tulus</Title>
+            <Weight>1240</Weight>
+            <Coordinates>
+                <x>5000</x>
+                <y>5005</y>
+                <z>5900</z>
+            </Coordinates>
+        </Planet>
+    </Group>
+    <Group name="Nimbus">
+        <Planet>
+            <Title>Nimbus</Title>
+            <Weight>5000</Weight>
+            <Coordinates>
+                <x>3110</x>
+                <y>4300</y>
+                <z>3200</z>
+            </Coordinates>
+        </Planet>
+        <Planet>
+            <Title>Nimbus</Title>
+            <Weight>5000</Weight>
+            <Coordinates>
+                <x>3</x>
+                <y>4</y>
+                <z>3</z>
+            </Coordinates>
+        </Planet>
+    </Group>
+    <Group name="Gigant">
+        <Planet>
+            <Title>Gigant</Title>
+            <Weight>8000</Weight>
+            <Coordinates>
+                <x>3510</x>
+                <y>4600</y>
+                <z>3300</z>
+            </Coordinates>
+        </Planet>
+    </Group>
+</UniverseGroup>

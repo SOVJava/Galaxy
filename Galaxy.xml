@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Galaxy>
+    <Title>Milky Way</Title>
+    <Planet>
+        <Title>Mars</Title>
+        <Weight>100</Weight>
+        <Coordinates>
+            <x>50</x>
+            <y>50</y>
+            <z>50</z>
+        </Coordinates>
+    </Planet>
+    <Planet>
+        <Title>Neptune</Title>
+        <Weight>200</Weight>
+        <Coordinates>
+            <x>110</x>
+            <y>300</y>
+            <z>200</z>
+        </Coordinates>
+    </Planet>
+
+</Galaxy>

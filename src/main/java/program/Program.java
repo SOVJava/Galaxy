@@ -3,8 +3,11 @@ package program;
 import model.Galaxy;
 import model.Planet;
 import model.Universe;
+import org.xml.sax.SAXException;
 import util.Generator;
 
+import javax.xml.parsers.ParserConfigurationException;
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -13,13 +16,37 @@ public class Program {
         Planet planet = null;
         Galaxy galaxy = null;
         Universe universe = null;
+
+        try {
+            /*planet = Planet.parseXML("Planet.xml");
+            System.out.println(planet);
+
+            galaxy = Galaxy.parseXML("Galaxy.xml");
+            System.out.println(galaxy);*/
+
+            universe = Universe.parseXML("Universe.xml");
+            System.out.println(universe.getTitle());
+            for (int i = 0; i < universe.getGalaxies().size(); i++) {
+                System.out.println("    " + universe.getGalaxies().get(i).getTitle());
+                for (int j = 0; j < universe.getGalaxies().get(i).getPlanets().size(); j++) {
+                    System.out.println("        " + universe.getGalaxies().get(i).getPlanets().get(j));
+                }
+            }
+        } catch (ParserConfigurationException | IOException | SAXException e) {
+            e.printStackTrace();
+        }
+
+
         boolean hasB = false;
         while (true) {
             Scanner sc = new Scanner(System.in);
             System.out.println(" ");
             System.out.println("Вас приветствует Виртуальный помошник.\n" +
-                    "Нажмите 1 чтоб войти в панель планет,\n" + "нажмите 2 чтоб войти в панель галактик,\n" +
-                    "нажмите 3 для входа в панель вселенной.\nнажмите 4 для выхода из программы.\nВаш выбор: ");
+                    "Нажмите 1 чтоб войти в панель планет,\n" +
+                    "нажмите 2 чтоб войти в панель галактик,\n" +
+                    "нажмите 3 для входа в панель вселенной.\n" +
+                    "нажмите 4 для выхода из программы.\n" +
+                    "Ваш выбор: ");
             if (!sc.hasNextInt()) {
                 System.out.println("Неверный ввод. Перезапустите программу и попробуйте снова!");
                 break;
